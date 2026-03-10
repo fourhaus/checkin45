@@ -1,0 +1,121 @@
+{
+  "property": {
+    "name": "Four Haus Residence",
+    "address": "Unit 45, 32-34 Bunn Street, Pyrmont NSW 2009",
+    "logo": "images/FourHaus.png",
+    "wifi": {
+      "network": "FourHaus_5G",
+      "password": "Stay@Fourhaus!"
+    },
+    "checkInTime": "3:00 PM",
+    "checkOutTime": "10:00 AM",
+    "amenitiesLevel": "There is no amenties in this building",
+    "parkingLevel": "2",
+    "parkingSpot": "325"
+  },
+  "markers": {
+    "parking": {
+      "lat": -33.870738875106,
+      "lng": 151.1971538267013,
+      "popup": "<strong>Parking Location</strong><br>Level 2, Spot 325"
+    },
+    "home": {
+      "lat": -33.870886607095265,
+      "lng": 151.19715339020223,
+      "popup": "<strong>Four Haus Residnece</strong>"
+    },
+    "lockbox": {
+      "lat": -33.870566202999655,
+      "lng": 151.19731127239262,
+      "popup": "<strong>Lockbox Location</strong><ul><li> Lockbox located on Harwood Lane across the street from the property.</li><li> Please open the lockbox labelled 4H with the passcode provided in the message</li><li> You should be able to see 2 key cards in the lockbox</li></ul><img src='/images/lockbox.png' style='width: 100%; height: auto;'>"
+    }
+  },
+  "map": {
+    "center": [
+      -33.870820090486454,
+      151.19731821069166
+    ],
+    "zoom": 17,
+    "tileLayer": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+  },
+  "topics": [
+    {
+      "id": "lockbox",
+      "title": "Lockbox",
+      "icon": "lockbox.png",
+      "useMap": true,
+      "steps": [
+        {
+          "title": "Step 1 – Collect the keys from the lockbox",
+          "text": "The lockbox is located on Harwood Lane across the street from the property",
+          "location": "{lockbox}",
+          "media": "lockbox.png"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "id": "parking",
+      "title": "Parking",
+      "icon": "parkingIcon.png",
+      "useMap": true,
+      "steps": [
+         {
+          "title": "Step 1 – Collect the keys from the lockbox",
+          "text": "The lockbox is located on Harwood Lane across the street from the property",
+          "location": "{lockbox}",
+          "media": "lockbox.png"
+        },
+        {
+          "title": "Step 2 – Parking entrance is located near the middle of Harwood Lane",
+          "text": "Tap your key card on the reader to open the gate",
+          "location": "{parking}",
+          "media": "liverpoolSt.png"
+        }
+        
+      ],
+      "routes": []
+    },
+    {
+      "id": "building-entry",
+      "title": "Building Entry",
+      "icon": "apartment.png",
+      "useMap": false,
+      "steps": [
+        {
+          "title": "Step 1 – Building Entry",
+          "text": "Scan the key card against the reader until you hear a beep. The glass door should open.",
+          "media": "cardReader.JPG"
+        },
+        {
+          "title": "Step 2 – Walk towards the Lift lobby",
+          "text": "Proceed to lift lobby. <br> You are on <b>LEVEL 25</b>, only use the lifts on the left with <b> High Rise Access </b>",
+          "media": "lobby.gif"
+        },
+        {
+          "title": "Step 3 – Enter the lift",
+          "text": "Scan the key card on the reader and press level 25",
+          "media": "lift.JPG"
+        },
+        {
+          "title": "Step 4 – Turn right after exiting the lift",
+          "text": "After exiting the lift, turn right into the corridor. <br> The apartment is located at the end of the corridor.",
+          "media": "level25.gif"
+        },
+        {
+          "title": "Step 5: Welcome to your home away from home",
+          "text": "<strong>Door Opening Instructions:</strong><br>1. Insert the <b>GREEN</b> key into the top keyhole.<br>2. Turn the key clockwise and<br>3. Pull down the door handle at the same time while pushing the door open.",
+          "media": "door.JPG"
+        }
+      ]
+    }
+  ],
+  "generalInfo": {
+    "houseRules": [
+      "This is a non-smoking apartment.",
+      "Please keep the access cards and remote safe and respect building rules.",
+      "Please keep the volume down after 10:00 PM.",
+      "A fee of <strong>$200</strong> will be charged for the replacement of each access card and remote."
+    ]
+  }
+}
