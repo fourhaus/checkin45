@@ -27,7 +27,7 @@
     "lockbox": {
       "lat": -33.870566202999655,
       "lng": 151.19731127239262,
-      "popup": "<strong>Lockbox Location</strong><ul><li> Lockbox located on Harwood Lane across the street from the property.</li><li> Please open the lockbox labelled 4H with the passcode provided in the message</li><li> You should be able to see 2 key cards in the lockbox</li></ul><img src='/images/lockbox.png' style='width: 100%; height: auto;'>"
+      "popup": "<strong>Lockbox Location</strong><ul><li> Lockbox located on Harwood Lane across the street from the property.</li><li> Please open the lockbox labelled 4H with the passcode provided in the message</li><li> You should be able to see 2 key cards in the lockbox</li></ul><img src='images/lockbox.png' style='width: 100%; height: auto;'>"
     }
   },
   "map": {
