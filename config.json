@@ -17,7 +17,7 @@
     "parking": {
       "lat": -33.870738875106,
       "lng": 151.1971538267013,
-      "popup": "<strong>Parking Location</strong><br>Level 2, Spot 325"
+      "popup": "<strong>Parking Location</strong><br>Level P1, Spot 45"
     },
     "home": {
       "lat": -33.870886607095265,
@@ -27,7 +27,7 @@
     "lockbox": {
       "lat": -33.870566202999655,
       "lng": 151.19731127239262,
-      "popup": "<strong>Lockbox Location</strong><ul><li> The lockbox is located on Harwood Lane across the street from the property.</li><li> Please open the lockbox labelled '4H' with the passcode provided in the message</li><li> You should be able to see 2 key cards in the lockbox</li><li>Please close the lockbox and jumbled up the code</li></ul><img src='images/lockbox.png' style='width: 100%; height: auto;'>"
+      "popup": "<strong>Lockbox Location</strong><br><img src='images/lockbox.png' style='width: 300px; height: auto;'>"
     }
   },
   "map": {
@@ -47,9 +47,13 @@
       "steps": [
         {
           "title": "Step 1 – Collect the keys from the lockbox",
-          "text": "The lockbox is located on Harwood Lane across the street from the property",
-          "location": "{lockbox}",
-          "media": "lockbox.png"
+          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/aYBjseWyREVKXhs69\" target=\"_blank\">32-34 Bunn Street, Pyrmont NSW 2009</a>. The lockbox is located on Harwood Lane, across the street from the property.</li><li>Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
+          "location": "{lockbox}"
+        },
+        {
+          "title": "Step 2 – Proceed to cross the road and walk towards building B.",
+          "text": "After collecting the keys, cross the road and walk towards building B. <br>Look for Building B, Unit 24-47. <br> <strong>Your apartment is UNIT 45 , LEVEL 7</strong>",
+          "location": "{home}"
         }
       ],
       "routes": []
@@ -60,54 +64,31 @@
       "icon": "parkingIcon.png",
       "useMap": true,
       "steps": [
-         {
+        {
           "title": "Step 1 – Collect the keys from the lockbox",
-          "text": "The lockbox is located on Harwood Lane across the street from the property",
-          "location": "{lockbox}",
-          "media": "lockbox.png"
+          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/aYBjseWyREVKXhs69\" target=\"_blank\">32-34 Bunn Street, Pyrmont NSW 2009</a>. The lockbox is located on Harwood Lane, across the street from the property.</li><li>Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
+          "location": "{lockbox}"
         },
         {
           "title": "Step 2 – Parking entrance is located near the middle of Harwood Lane",
-          "text": "Tap your key card on the reader to open the gate",
+          "text": "Please hold your key card on the reader until the light turn green and wait for the garage gate to open fully.",
           "location": "{parking}",
-          "media": "liverpoolSt.png"
+          "media": ""
+        },
+        {
+          "title": "Step 3 – Enter the parking and park at spot 45 on level P1",
+          "text": "<ul><li>Drive down the ramp. Parking is located on Level P1, the first level upon entry.</li><li>Turn left when reaching the intersection.</li><li>You should be able to see parking spot 45 on your right-hand side.</li></ul>",
+          "location": "{parking}",
+          "media": "images/carpark2.JPG"
+        },
+        {
+          "title": "Step 4 – Take the lift to the left of the parking. <br>DO NOT take the lift in front of your parking spot",
+          "text": "<ul><li>Walk past the rubbish bins and head to the lift labeled <b>Building B (Units 24–47)</b></li><li>You are located on <b>Level 7, Unit 45</b></li><li>Hold the access card on the reader for 1 second until you hear a beep, then press Level 7.</li><li>Once you exit the lift, the unit is on your right.</li></ul>",
+          "location": "{parking}",
+          "media": "images/insideLift.JPG"
         }
-        
       ],
       "routes": []
-    },
-    {
-      "id": "building-entry",
-      "title": "Building Entry",
-      "icon": "apartment.png",
-      "useMap": false,
-      "steps": [
-        {
-          "title": "Step 1 – Building Entry",
-          "text": "Scan the key card against the reader until you hear a beep. The glass door should open.",
-          "media": "cardReader.JPG"
-        },
-        {
-          "title": "Step 2 – Walk towards the Lift lobby",
-          "text": "Proceed to lift lobby. <br> You are on <b>LEVEL 25</b>, only use the lifts on the left with <b> High Rise Access </b>",
-          "media": "lobby.gif"
-        },
-        {
-          "title": "Step 3 – Enter the lift",
-          "text": "Scan the key card on the reader and press level 25",
-          "media": "lift.JPG"
-        },
-        {
-          "title": "Step 4 – Turn right after exiting the lift",
-          "text": "After exiting the lift, turn right into the corridor. <br> The apartment is located at the end of the corridor.",
-          "media": "level25.gif"
-        },
-        {
-          "title": "Step 5: Welcome to your home away from home",
-          "text": "<strong>Door Opening Instructions:</strong><br>1. Insert the <b>GREEN</b> key into the top keyhole.<br>2. Turn the key clockwise and<br>3. Pull down the door handle at the same time while pushing the door open.",
-          "media": "door.JPG"
-        }
-      ]
     }
   ],
   "generalInfo": {

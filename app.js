@@ -456,6 +456,33 @@ class CheckInApp {
             this.map.flyTo([location.lat, location.lng], 18);
 
             if (marker) {
+                // If step has media, use it in the popup
+                // If media is empty, the marker's original popup (from config) is shown
+                if (step.media) {
+                    const popupContent = `<div class="popup-content"><img style='width: 300px; height: auto;' src="${step.media}" alt="${step.title}"></div>`;
+                    marker.setPopupContent(popupContent);
+                    console.log(`Set popup content for marker at ${location.lat}, ${location.lng}`);
+                } else {
+                    // Reset to original popup from location config when media is empty
+                    if (location.popup) {
+                        marker.setPopupContent(location.popup);
+                    }
+                }
+                // Ensure popup is fully visible when opened
+                marker.on('popupopen', () => {
+                    setTimeout(() => {
+                        const popup = marker.getPopup();
+                        if (popup) {
+                            // Pan to ensure popup top is visible
+                            const popupElement = popup.getElement();
+                            if (popupElement) {
+                                const popupHeight = popupElement.offsetHeight;
+                                // Pan up to show popup with buffer
+                                this.map.panBy([0, (popupHeight / 2) + 50]);
+                            }
+                        }
+                    }, 100);
+                });
                 marker.openPopup();
             }
 
