@@ -10,8 +10,8 @@
     "checkInTime": "3:00 PM",
     "checkOutTime": "10:00 AM",
     "amenitiesLevel": "There is no amenties in this building",
-    "parkingLevel": "2",
-    "parkingSpot": "325"
+    "parkingLevel": "P1",
+    "parkingSpot": "45"
   },
   "markers": {
     "parking": {
@@ -94,7 +94,8 @@
   "generalInfo": {
     "houseRules": [
       "This is a non-smoking apartment.",
-      "Please keep the access cards and remote safe and respect building rules.",
+      "No partying or loud music are allowed in the apartment.",
+      "Please keep the access cards safe and respect building rules.",
       "Please keep the volume down after 10:00 PM.",
       "A fee of <strong>$200</strong> will be charged for the replacement of each access card and remote."
     ]
