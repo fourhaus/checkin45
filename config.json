@@ -22,12 +22,12 @@
     "home": {
       "lat": -33.870886607095265,
       "lng": 151.19715339020223,
-      "popup": "<strong>Four Haus Residnece</strong>"
+      "popup": "<strong>Four Haus Residnece</strong><img src='images/fourhausresidence.JPG' style='width: 300px; height: auto;'>"
     },
     "lockbox": {
-      "lat": -33.870566202999655,
-      "lng": 151.19731127239262,
-      "popup": "<strong>Lockbox Location</strong><br><img src='images/lockbox.png' style='width: 300px; height: auto;'>"
+      "lat": -33.87110420945887,
+      "lng": 151.1971292333582,
+      "popup": "<strong>Lockbox Location</strong><br><img src='images/lockbox.JPG' style='width: 300px; height: auto;'>"
     }
   },
   "map": {
@@ -46,14 +46,36 @@
       "useMap": true,
       "steps": [
         {
-          "title": "Step 1 – Collect the keys from the lockbox",
-          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/aYBjseWyREVKXhs69\" target=\"_blank\">32-34 Bunn Street, Pyrmont NSW 2009</a>. The lockbox is located on Harwood Lane, across the street from the property.</li><li>Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
+          "title": "Step 1 – Navigate to the lockbox location",
+          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/ZsXBouZiUWAm7mje7\" target=\"_blank\">Harwood Lane, Pyrmont NSW 2009</a>, to the right of Bunn Street The lockbox is located on one of the fence posts </li>",
+          "location": {
+            "lat": -33.87128348442683,
+            "lng": 151.19711984562625,
+            "popup": "<strong>Harwood Lane</strong><br><img src='./images/harwoodlane.JPG' style='width: 300px; height: auto;'>"
+          },
+          "media": "./images/harwoodlane.JPG"
+        },
+        {
+          "title": "Step 2 – Collect the keys from the lockbox",
+          "text": "Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
           "location": "{lockbox}"
         },
         {
-          "title": "Step 2 – Proceed to cross the road and walk towards building B.",
-          "text": "After collecting the keys, cross the road and walk towards building B. <br>Look for Building B, Unit 24-47. <br> <strong>Your apartment is UNIT 45 , LEVEL 7</strong>",
+          "title": "Step 3 – Walk forward towards building B.",
+          "text": "After collecting the keys, walk forward 10m towards building B. <br>Look for Building B, Unit 24-47. <br> <strong>Your apartment is UNIT 45 , LEVEL 7</strong>",
           "location": "{home}"
+        },
+        {
+          "title": "Step 4 – Scan the key card on the scanner ",
+          "text": "<ul><li>Scan the key card provided on the scanner and wait for beep sound and green light</li><li>Push the door open and walk towards the lift</li></ul>",
+          "location": "{home}",
+          "media": "./images/ScannerEntrance.JPG"
+        },
+        {
+          "title": "Step 5 – Enter the lift and scan your key card on the lift scanner",
+          "text": "<ul><li>Hold your access card against the scanner for two seconds and wait for the beep sound</li><li>Press the Level 7 button. You are on <strong>Level 7, Unit 45</strong></li><li>Welcome to Four Haus Residence!</li></ul>",
+          "location": "{home}",
+          "media": "./images/liftScanner.JPG"
         }
       ],
       "routes": []
@@ -65,30 +87,126 @@
       "useMap": true,
       "steps": [
         {
-          "title": "Step 1 – Collect the keys from the lockbox",
-          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/aYBjseWyREVKXhs69\" target=\"_blank\">32-34 Bunn Street, Pyrmont NSW 2009</a>. The lockbox is located on Harwood Lane, across the street from the property.</li><li>Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
+          "title": "Step 1 – Navigate to the lockbox location",
+          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/ZsXBouZiUWAm7mje7\" target=\"_blank\">Harwood Lane, Pyrmont NSW 2009</a>, to the right of Bunn Street The lockbox is located on one of the fence posts </li><li> Stop your car safelty on the left side of the road</li></ul>",
+          "location": {
+            "lat": -33.87128348442683,
+            "lng": 151.19711984562625,
+            "popup": "<strong>Harwood Lane</strong><br><img src='./images/harwoodlane.JPG' style='width: 300px; height: auto;'>"
+          },
+          "media": "./images/harwoodlane.JPG"
+        },
+        {
+          "title": "Step 2 – Collect the keys from the lockbox",
+          "text": "Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
           "location": "{lockbox}"
         },
         {
-          "title": "Step 2 – Parking entrance is located near the middle of Harwood Lane",
-          "text": "Please hold your key card on the reader until the light turn green and wait for the garage gate to open fully.",
+          "title": "Step 3 – Drive forward 50m and look for the entrance to the parking garage on the left ",
+          "text": "<ul><li>Scan the key card provided on the scanner and wait for the gate to open</li><li>Drive down the ramp. Parking is located on Level P1, the first level upon entry.</li><li>Turn left when reaching the intersection.</li><li>You should be able to see parking spot 45 on your right-hand side.</li></ul>",
           "location": "{parking}",
-          "media": ""
+          "media": "images/GarageEntrance.png"
         },
         {
-          "title": "Step 3 – Enter the parking and park at spot 45 on level P1",
-          "text": "<ul><li>Drive down the ramp. Parking is located on Level P1, the first level upon entry.</li><li>Turn left when reaching the intersection.</li><li>You should be able to see parking spot 45 on your right-hand side.</li></ul>",
+          "title": "Step 4 – Take the lift located to the left of the parking. <br>DO NOT take the lift in front of your parking spot",
+          "text": "<ul><li>Walk past the rubbish bins and head to the lift labeled <b>Building B (Units 24–47)</b></li><li>You are located on <b>Level 7, Unit 45</b></li><li>Hold the access card on the reader for 1 second until you hear a beep, then press Level 7.</li><li>Once you exit the lift, the unit is on your right.</li></ul>",
           "location": "{parking}",
           "media": "images/carpark2.JPG"
         },
         {
-          "title": "Step 4 – Take the lift to the left of the parking. <br>DO NOT take the lift in front of your parking spot",
-          "text": "<ul><li>Walk past the rubbish bins and head to the lift labeled <b>Building B (Units 24–47)</b></li><li>You are located on <b>Level 7, Unit 45</b></li><li>Hold the access card on the reader for 1 second until you hear a beep, then press Level 7.</li><li>Once you exit the lift, the unit is on your right.</li></ul>",
-          "location": "{parking}",
-          "media": "images/insideLift.JPG"
+          "title": "Step 5 – Enter the lift and scan your key card on the lift scanner",
+          "text": "<ul><li>Hold your access card against the scanner for two seconds and wait for the beep sound</li><li>Press the Level 7 button. You are on <strong>Level 7, Unit 45</strong></li><li>Welcome to Four Haus Residence!</li></ul>",
+          "location": "{home}",
+          "media": "./images/liftScanner.JPG"
         }
       ],
       "routes": []
+    },
+    {
+      "id": "ShortcutToLightRail",
+      "title": "Shortcut to Light Rail",
+      "icon": "walkingIcon.png",
+      "useMap": true,
+      "steps": [
+        {
+          "title": "Step 1 – Walk towards Novetel Hotel",
+          "text": "<li>When you exit the apartment, make a right turn and walk towards Bunn Street</li><li> Turn left and walk towards the Novetel Hotel which is across the road</li></ul>",
+          "location": {
+            "lat": -33.87137097418298,
+            "lng": 151.1973983264316,
+            "popup": "<img src='./images/zebraCrossing.JPG' style='width: 300px; height: auto;'>"
+          }
+        },
+        {
+          "title": "Step 2 – Walk into Novetal Hotel",
+          "text": "Walk into Novatel Hotel pick up and drop off area ",
+          "location": {
+            "lat": -33.87165814321039,
+            "lng": 151.1975623833767,
+            "popup": "<img src='./images/Novatel.JPG' style='width: 300px; height: auto;'>"
+          }
+        },
+        {
+          "title": "Step 3 – Walk through the hotel and towards the parking lot",
+          "text": "Walk around the hotel to the carpark area. Do not enter the hotel. You will see signs to the lightrail",
+          "location": {
+            "lat": -33.87213668935533, 
+            "lng": 151.19788131323224,
+            "popup": "<img src='./images/novatelCarpark.JPG' style='width: 300px; height: auto;'>"
+          }
+        },
+        {
+          "title": "Step 4 – Walk along the pathway",
+          "text": "Walk along the pathway and you will see a flight of stairs at the end",
+          "location": {
+            "lat": -33.87228954732653, 
+            "lng": 151.1980012594781,
+            "popup": "<img src='./images/pathway.JPG' style='width: 300px; height: auto;'>"
+          }
+        },
+        {
+          "title": "Step 5 – Walk down the stairs and you will see the lifts on your left",
+          "text": "Take the lift down to level 1. You are on Level 4.",
+          "location": {
+            "lat": -33.87253967796166, 
+            "lng": 151.19793431273624,
+            "popup": "<img src='./images/liftsNovatel.JPG' style='width: 300px; height: auto;'>"
+          }
+        },
+        {
+          "title": "Step 6 – Turn left when exiting the lift and you will see the light rail station.",
+          "text": "Once you exit the lift, turn left and follow signs to the light rail station.",
+          "location": {
+            "lat": -33.872697167244766, 
+            "lng": 151.19796499665958,
+            "popup": "<img src='./images/lightrailsigns.JPG' style='width: 300px; height: auto;'>"
+          }
+        },
+        {
+          "title": "Step 7 – Walk towards ICC/ Take the light rail to the city",
+          "text": "Cross the track to the other side of the to take the lightrail to the city. <br> If you are not taking the lightrail, you can also cross the tracks and traffic lights and walk towards ICC/Darling Harbour",
+          "location": {
+            "lat": -33.87254823737375, 
+            "lng": 151.19811270415485,
+            "popup": "<img src='./images/track.JPG' style='width: 300px; height: auto;'>"
+          }
+        }
+      ],
+      "routes": [
+        {
+          "points": [
+            [-33.87137097418298, 151.1973983264316],
+            [-33.87165814321039, 151.1975623833767],
+            [-33.87213668935533, 151.19788131323224],
+            [-33.87228954732653, 151.1980012594781],
+            [-33.87253967796166, 151.19793431273624],
+            [-33.872697167244766, 151.19796499665958],
+            [-33.87254823737375, 151.19811270415485]
+          ],
+          "color": "#28a745",
+          "weight": 5
+        }
+      ]
     }
   ],
   "generalInfo": {
