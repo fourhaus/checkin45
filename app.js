@@ -119,7 +119,7 @@ class CheckInApp {
                 // Create markers for steps that have locations
                 topic.steps.forEach((step, index) => {
                     if (step.location) {
-                        const marker = this.createMarker(step, topic);
+                        const marker = this.createMarker(step, topic, index);
                         if (marker) {
                             this.markers[topic.id].push(marker);
                         }
@@ -156,7 +156,7 @@ class CheckInApp {
         }
     }
 
-    createMarker(step, topic) {
+    createMarker(step, topic, stepIndex) {
         let location = step.location;
 
         // Check if location is a marker placeholder like {lockbox}
@@ -170,12 +170,15 @@ class CheckInApp {
         }
 
         const iconHtml = this.getBootstrapIcon(topic.id);
-        const icon = iconHtml ?
-            L.divIcon({
-                className: 'custom-marker',
-                html: `<div class="marker-wrapper"><i class="${iconHtml}"></i></div>`,
-                iconAnchor: [15, 15]
-            }) : null;
+        const icon = L.divIcon({
+            className: 'custom-marker',
+            html: `
+        <div class="marker-wrapper">
+            ${stepIndex + 1}
+        </div>
+    `,
+            iconAnchor: [15, 15]
+        });
 
         const marker = L.marker([location.lat, location.lng], { icon });
 
@@ -384,27 +387,23 @@ class CheckInApp {
 
     showRoute(topicId, routeIndex) {
         try {
-            // First, hide all routes for this topic
+            // Loop through all routes up to current step
             if (this.routes[topicId]) {
-                this.routes[topicId].forEach(route => {
-                    if (route && this.map.hasLayer(route)) {
-                        this.map.removeLayer(route);
+                this.routes[topicId].forEach((route, index) => {
+                    if (!route) return;
+
+                    if (index <= routeIndex) {
+                        // SHOW previous + current routes
+                        if (!this.map.hasLayer(route)) {
+                            route.addTo(this.map);
+                        }
+                    } else {
+                        // HIDE future routes
+                        if (this.map.hasLayer(route)) {
+                            this.map.removeLayer(route);
+                        }
                     }
                 });
-            }
-
-            // Also hide any active route
-            if (this.activeRoute && this.map.hasLayer(this.activeRoute)) {
-                this.map.removeLayer(this.activeRoute);
-            }
-
-            // Now show only specific route for this step (if it exists and is not null)
-            if (this.routes[topicId] && this.routes[topicId][routeIndex] !== null) {
-                this.activeRoute = this.routes[topicId][routeIndex];
-                this.activeRoute.addTo(this.map);
-                console.log(`Showing route ${routeIndex} for topic ${topicId}`);
-            } else {
-                console.log(`No route found for topic ${topicId}, index ${routeIndex} (null or undefined)`);
             }
         } catch (error) {
             console.error('Error in showRoute:', error);
