@@ -47,7 +47,7 @@
       "steps": [
         {
           "title": "Step 1 – Navigate to the lockbox location",
-          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/ZsXBouZiUWAm7mje7\" target=\"_blank\">Harwood Lane, Pyrmont NSW 2009</a>, to the right of Bunn Street The lockbox is located on one of the fence posts </li>",
+          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/ZsXBouZiUWAm7mje7\" target=\"_blank\">Harwood Lane, Pyrmont NSW 2009</a>, located to the right of Bunn Street. The lockbox is located on one of the fence posts.</li>",
           "location": {
             "lat": -33.87128348442683,
             "lng": 151.19711984562625,
@@ -57,12 +57,12 @@
         },
         {
           "title": "Step 2 – Collect the access cards from the lockbox",
-          "text": "Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
+          "text": "<ul><li>Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 access cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
           "location": "{lockbox}"
         },
         {
           "title": "Step 3 – Walk forward towards building B.",
-          "text": "After collecting the keys, walk forward 10m towards building B. <br>Look for Building B, Unit 24-47. <br> <strong>Your apartment is UNIT 45 , LEVEL 7</strong>",
+          "text": "<ul><li>After collecting the access cards, walk forward 10m towards building B. </li><li>Look for Building B, Unit 24-47. <br> <strong>Your apartment is UNIT 45 , LEVEL 7</strong></li></ul>",
           "location": "{home}"
         },
         {
@@ -88,7 +88,7 @@
       "steps": [
         {
           "title": "Step 1 – Navigate to the lockbox location",
-          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/ZsXBouZiUWAm7mje7\" target=\"_blank\">Harwood Lane, Pyrmont NSW 2009</a>, to the right of Bunn Street The lockbox is located on one of the fence posts </li><li> Stop your car safelty on the left side of the road</li></ul>",
+          "text": "<strong>Lockbox Location</strong><ul><li>Proceed to <a href=\"https://maps.app.goo.gl/ZsXBouZiUWAm7mje7\" target=\"_blank\">Harwood Lane, Pyrmont NSW 2009</a>, located to the right of Bunn Street. The lockbox is located on one of the fence posts.</li><li> Stop your car safely on the left side of the road.</li></ul>",
           "location": {
             "lat": -33.87128348442683,
             "lng": 151.19711984562625,
@@ -97,25 +97,31 @@
           "media": "./images/harwoodlane.JPG"
         },
         {
-          "title": "Step 2 – Collect the keys from the lockbox",
-          "text": "Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 key cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
+          "title": "Step 2 – Collect the access cards from the lockbox",
+          "text": "<ul><li>Please open the lockbox labelled '4H' with the passcode provided in the message.</li><li>You should be able to see 2 access cards in the lockbox.</li><li>Please close the lockbox and jumble up the code.</li></ul>",
           "location": "{lockbox}"
         },
         {
           "title": "Step 3 – Drive forward 50m and look for the entrance to the parking garage on the left ",
-          "text": "<ul><li>Scan the key card provided on the scanner and wait for the gate to open</li><li>Drive down the ramp. Parking is located on Level P1, the first level upon entry.</li><li>Turn left when reaching the intersection.</li><li>You should be able to see parking spot 45 on your right-hand side.</li></ul>",
+          "text": "<ul><li>Scan the access card provided on the scanner and wait for the gate to open.</li><li>Drive down the ramp. Parking is located on Level P1, the first level upon entry.</li><li>Turn left when reaching the intersection.</li><li>You should be able to see parking spot 45 on your right-hand side.</li></ul>",
           "location": "{parking}",
           "media": "images/GarageEntrance.png"
         },
         {
-          "title": "Step 4 – Take the lift located to the left of the parking. <br>DO NOT take the lift in front of your parking spot",
-          "text": "<ul><li>Walk past the rubbish bins and head to the lift labeled <b>Building B (Units 24–47)</b></li><li>You are located on <b>Level 7, Unit 45</b></li><li>Hold the access card on the reader for 1 second until you hear a beep, then press Level 7.</li><li>Once you exit the lift, the unit is on your right.</li></ul>",
+          "title": "Step 4 – DO NOT take the lift in front of your parking spot",
+          "text": "<ul><li>Walk past the rubbish bins and head to the lift labeled <b>Building B (Units 24–47)</b>.</li></ul>",
+          "location": "{parking}",
+          "media": "images/CarparkToLift.JPG"
+        },
+        {
+          "title": "Step 5 – Take the lift to Level 7 and head to your apartment",
+          "text": "<ul><li>You are located on <b>Level 7, Unit 45.</b></li><li>Hold the access card on the reader for 1 second until you hear a beep, then press Level 7.</li><li>Once you exit the lift, the unit is on your right.</li></ul>",
           "location": "{parking}",
           "media": "images/carpark2.JPG"
         },
         {
-          "title": "Step 5 – Enter the lift and scan your key card on the lift scanner",
-          "text": "<ul><li>Hold your access card against the scanner for two seconds and wait for the beep sound</li><li>Press the Level 7 button. You are on <strong>Level 7, Unit 45</strong></li><li>Welcome to Four Haus Residence!</li></ul>",
+          "title": "Step 5 – Enter the lift and scan your access card on the lift scanner",
+          "text": "<ul><li>Hold your access card against the scanner for two seconds and wait for the beep sound.</li><li>Press the Level 7 button. You are on <strong>Level 7, Unit 45.</strong></li><li>Welcome to Four Haus Residence!</li></ul>",
           "location": "{home}",
           "media": "./images/liftScanner.JPG"
         }
