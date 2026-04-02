@@ -130,7 +130,7 @@
       "steps": [
         {
           "title": "Shortcut to ICC/Lightrail and Darling Square <br> Step 1 – Walk towards Novotel Hotel",
-          "text": "<li>When you exit the apartment, make a right turn and walk towards Bunn Street</li><li> Turn left and walk towards the Novotel Hotel which is across the road</li></ul>",
+          "text": "<li>When you exit the apartment, make a right turn and walk towards Bunn Street</li><li> Turn left and walk towards Novotel Hotel direction which is across the road</li></ul>",
           "location": {
             "lat": -33.87137097418298,
             "lng": 151.1973983264316,
@@ -184,7 +184,7 @@
         },
         {
           "title": "Step 7 – Walk towards ICC/ Take the light rail to the city",
-          "text": "Cross the track to the other side of the to take the lightrail to the city. <br> If you are not taking the lightrail, you can also cross the tracks and traffic lights and walk towards ICC/Darling Harbour",
+          "text": "Cross the track to the other side of the to take the lightrail to the city. <br> If you are walking to darling harbour/ICC, cross the tracks and traffic lights and walk towards ICC direction.",
           "location": {
             "lat": -33.87254823737375,
             "lng": 151.19811270415485,

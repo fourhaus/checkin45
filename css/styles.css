@@ -74,7 +74,7 @@ body {
 
 .topic-tabs {
     display: flex;
-    gap: 8px;
+    gap: 8px;    
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
@@ -101,7 +101,7 @@ body {
 
 .topic-tab {
     flex-shrink: 0;
-    padding: 2px 4px;
+    padding: 4px 16px;   /* 👈 increase this */
     border-radius: 20px;
     border: 2px solid var(--border-color);
     background: white;
@@ -792,7 +792,9 @@ body {
     }
 }
 
-.marker-wrapper {
+
+/* Step markers (numbered) */
+.marker-step {
     background: #28a745;
     color: white;
     width: 30px;
@@ -806,3 +808,23 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     font-size: 14px;
 }
+.marker-main {
+    background: white;   /* or #fff */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.marker-main:hover {
+    transform: scale(1.15);
+}
+
+.marker-main i {
+    font-size: 16px;
+}
+

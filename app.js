@@ -173,7 +173,7 @@ class CheckInApp {
         const icon = L.divIcon({
             className: 'custom-marker',
             html: `
-        <div class="marker-wrapper">
+        <div class="marker-step">
             ${stepIndex + 1}
         </div>
     `,
@@ -201,7 +201,7 @@ class CheckInApp {
             'home': 'fas fa-home',
             'building-entry': 'fas fa-door-open',
             'amenities': 'fas fa-swimming-pool',
-            'ShortcutToLightRail': 'fas fa-walking'
+            'ShortcutToLightRail': 'text-primary fas fa-walking'
         };
         return iconMap[topicId] || 'fas fa-map-marker-alt';
     }
@@ -212,25 +212,32 @@ class CheckInApp {
         Object.entries(this.config.markers).forEach(([key, location]) => {
             // Hardcode icons for main markers
             let iconHtml;
+            let bgColor;
+
             switch (key) {
                 case 'lockbox':
-                    iconHtml = 'bi bi-lock';
+                    iconHtml = 'fas fa-lock';
+                    bgColor = '#dc3545'; // red
                     break;
                 case 'parking':
-                    iconHtml = 'bi bi-car-front';
+                    iconHtml = 'fas fa-car';
+                    bgColor = '#007bff'; // blue
                     break;
                 case 'home':
-                    iconHtml = 'bi bi-house';
+                    iconHtml = 'fas fa-house';
+                    bgColor = '#28a745'; // green
                     break;
                 default:
-                    iconHtml = 'bi bi-geo-alt-fill';
+                    iconHtml = 'fas fa-map-marker-alt';
+                    bgColor = '#6c757d'; // grey
             }
-
-
             const icon = iconHtml ?
                 L.divIcon({
                     className: 'custom-marker',
-                    html: `<div class="marker-wrapper"><i class="${iconHtml}"></i></div>`,
+                    html: `
+                    <div class="marker-main">
+                        <i class="${iconHtml}" style="color:${bgColor}"></i>
+                    </div>`,
                     iconAnchor: [15, 15]
                 }) : null;
 
@@ -252,7 +259,7 @@ class CheckInApp {
             this.config.topics.forEach((topic, index) => {
                 const tab = document.createElement('button');
                 tab.className = 'topic-tab';
-                tab.id = `tab-${index}`;
+                tab.id = `tab- ${index}`;
                 tab.onclick = () => this.goToTopic(index);
 
                 const icon = this.getTopicIcon(topic.id);
@@ -289,7 +296,7 @@ class CheckInApp {
 
         // Update step navigation
         document.getElementById('stepText').innerHTML =
-            `<strong>${step.title}</strong><br>${step.text}`;
+            `<strong> ${step.title}</strong > <br>${step.text}`;
 
         document.getElementById('prevBtn').disabled = this.currentStep === 0;
         document.getElementById('nextBtn').disabled = this.currentStep === topic.steps.length - 1;
@@ -323,7 +330,7 @@ class CheckInApp {
         this.showTopicElements(topic.id);
 
         // Show specific route for this step if available
-        if (topic.routes && topic.routes[this.currentStep]) {
+        if (topic.routes) {
             this.showRoute(topic.id, this.currentStep);
         }
 
@@ -338,10 +345,10 @@ class CheckInApp {
         document.getElementById('content').style.display = 'block';
 
         const contentHtml = `
-            <div class="step-content">
-                ${step.media ? `<img src="${step.media}" alt="${step.title}">` : ''}
-            </div>
-        `;
+                    <div class="step-content">
+                        ${step.media ? `<img src="${step.media}" alt="${step.title}">` : ''}
+                    </div>
+                    `;
 
         document.getElementById('content').innerHTML = contentHtml;
     }
@@ -485,37 +492,37 @@ class CheckInApp {
         document.getElementById('stepNav').style.display = 'none';
 
         const infoHtml = `
-            <div class="info-section">
-                <h3><i class="bi bi-info-circle"></i> Property Information</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <strong>Address:</strong> ${this.config.property.address}
+                    <div class="info-section">
+                        <h3><i class="bi bi-info-circle"></i> Property Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <strong>Address:</strong> ${this.config.property.address}
+                            </div>
+                            <div class="info-item">
+                                <strong>Check-in / Check-out:</strong> ${this.config.property.checkInTime} / ${this.config.property.checkOutTime}
+                            </div>
+                            <div class="info-item">
+                                <strong>Wi-Fi Network:</strong> ${this.config.property.wifi.network}
+                            </div>
+                            <div class="info-item">
+                                <strong>Wi-Fi Password:</strong> ${this.config.property.wifi.password}
+                            </div>
+                            <div class="info-item">
+                                <strong>Amenities:</strong> ${this.config.property.amenitiesLevel}
+                            </div>
+                            <div class="info-item">
+                                <strong>Parking:</strong> ${this.config.property.parkingLevel}, Spot ${this.config.property.parkingSpot}
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <strong>Check-in / Check-out:</strong> ${this.config.property.checkInTime} / ${this.config.property.checkOutTime}
-                    </div>
-                    <div class="info-item">
-                        <strong>Wi-Fi Network:</strong> ${this.config.property.wifi.network}
-                    </div>
-                    <div class="info-item">
-                        <strong>Wi-Fi Password:</strong> ${this.config.property.wifi.password}
-                    </div>
-                    <div class="info-item">
-                        <strong>Amenities:</strong> ${this.config.property.amenitiesLevel}
-                    </div>
-                    <div class="info-item">
-                        <strong>Parking:</strong> ${this.config.property.parkingLevel}, Spot ${this.config.property.parkingSpot}
-                    </div>
-                </div>
-            </div>
 
-            <div class="info-section">
-                <h3><i class="bi bi-exclamation-triangle"></i> House Rules</h3>
-                <ul class="rules-list">
-                    ${this.config.generalInfo.houseRules.map(rule => `<li>${rule}</li>`).join('')}
-                </ul>
-            </div>
-        `;
+                    <div class="info-section">
+                        <h3><i class="bi bi-exclamation-triangle"></i> House Rules</h3>
+                        <ul class="rules-list">
+                            ${this.config.generalInfo.houseRules.map(rule => `<li>${rule}</li>`).join('')}
+                        </ul>
+                    </div>
+                    `;
 
         document.getElementById('content').innerHTML = infoHtml;
         this.updateActiveTab();
